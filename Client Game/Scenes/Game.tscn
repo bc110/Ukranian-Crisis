@@ -1,0 +1,4491 @@
+[gd_scene load_steps=114 format=2]
+
+[ext_resource path="res://Sprites/Select.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Holder.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/DipSelect.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/P_Military.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/InfSelect.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Selection.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/EffortHolder.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Empty.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/MenuEmpty.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/P_Diplomatic.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/P_Information.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/Ceasefire.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/OpinionHolder.gd" type="Script" id=13]
+[ext_resource path="res://Sprites/Arrow.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/ChangeValue.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/ShowValue.gd" type="Script" id=16]
+[ext_resource path="res://Sprites/Country Token/US.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/Token.gd" type="Script" id=18]
+[ext_resource path="res://Sprites/ActionColourpng.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/ActionText.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=21]
+[ext_resource path="res://Sprites/MilitaryHolder.png" type="Texture" id=22]
+[ext_resource path="res://Scripts/MilitaryHolder.gd" type="Script" id=23]
+[ext_resource path="res://Scripts/Region.gd" type="Script" id=24]
+[ext_resource path="res://Sprites/MapEmpty2.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Menu.png" type="Texture" id=26]
+[ext_resource path="res://Scripts/MinorSelected.gd" type="Script" id=27]
+[ext_resource path="res://Sprites/Effort/Minor.png" type="Texture" id=28]
+[ext_resource path="res://Montserrat-Regular.ttf" type="DynamicFontData" id=29]
+[ext_resource path="res://Scripts/TerritoryInfo.gd" type="Script" id=30]
+[ext_resource path="res://Sprites/Effort/ModerateEffort.PNG" type="Texture" id=31]
+[ext_resource path="res://Scripts/InformationHolder.gd" type="Script" id=32]
+[ext_resource path="res://Scripts/StartOfBattle.gd" type="Script" id=33]
+[ext_resource path="res://Sprites/Effort/Moderate.png" type="Texture" id=34]
+[ext_resource path="res://Scripts/Info.gd" type="Script" id=35]
+[ext_resource path="res://Scripts/Button2.gd" type="Script" id=36]
+[ext_resource path="res://Scripts/Battle.gd" type="Script" id=37]
+[ext_resource path="res://Sprites/Country Token/DE.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Country Token/PL.png" type="Texture" id=39]
+[ext_resource path="res://scripts/OrderPick.gd" type="Script" id=40]
+[ext_resource path="res://Sprites/Millatary.PNG" type="Texture" id=41]
+[ext_resource path="res://Sprites/Information.PNG" type="Texture" id=42]
+[ext_resource path="res://Sprites/Diplomatic.PNG" type="Texture" id=43]
+[ext_resource path="res://Scripts/TurnTypePick.gd" type="Script" id=44]
+[ext_resource path="res://Scripts/WaitingOpponent.gd" type="Script" id=45]
+[ext_resource path="res://Scripts/Battle Holder.gd" type="Script" id=46]
+[ext_resource path="res://Scenes/DiceLogic.gd" type="Script" id=47]
+[ext_resource path="res://Sprites/Die/d1.png" type="Texture" id=48]
+[ext_resource path="res://Scripts/DieLogic.gd" type="Script" id=49]
+[ext_resource path="res://Sprites/Effort/MinorEffort.PNG" type="Texture" id=50]
+[ext_resource path="res://Sprites/Neutral.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Intervention.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Support.png" type="Texture" id=53]
+[ext_resource path="res://Scripts/End Turn.gd" type="Script" id=54]
+[ext_resource path="res://Scripts/TurnTracker.gd" type="Script" id=55]
+[ext_resource path="res://Scripts/PlayerName.gd" type="Script" id=56]
+[ext_resource path="res://Scripts/PlayerPresteige.gd" type="Script" id=57]
+[ext_resource path="res://Scripts/PlayerScore.gd" type="Script" id=58]
+[ext_resource path="res://Scripts/EnemyName.gd" type="Script" id=59]
+[ext_resource path="res://Scripts/EnemyPresteige.gd" type="Script" id=60]
+[ext_resource path="res://Scripts/EnemyScore.gd" type="Script" id=61]
+[ext_resource path="res://Scripts/InfoScreen.gd" type="Script" id=62]
+[ext_resource path="res://Sprites/Effort/Major.png" type="Texture" id=63]
+[ext_resource path="res://Scripts/GameOverScreen.gd" type="Script" id=64]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=65]
+[ext_resource path="res://Scenes/InfoBox.gd" type="Script" id=66]
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=67]
+[ext_resource path="res://Sprites/Country Token/GB.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/Country Token/BY.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/Country Token/FR.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Country Token/RO.png" type="Texture" id=71]
+
+[sub_resource type="DynamicFont" id=31]
+size = 12
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 9
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 32
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 28
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=6]
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 34
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 27.5 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 15
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=15]
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 19
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=23]
+outline_size = 1
+outline_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=24]
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 32
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 24
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 27
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 203.466, 281.944 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 18
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 23
+outline_size = 1
+outline_color = Color( 0.286275, 0.286275, 0.286275, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=14]
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 36
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 55
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 41
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 39
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 41
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 30
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 30
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=35]
+size = 30
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 58.75, 30 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 59, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 61.5, 31 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 46
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=38]
+size = 14
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 20
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 28
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 90
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 46
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 29 )
+
+[node name="Node2D2" type="Node2D"]
+
+[node name="Map" type="Sprite" parent="."]
+position = Vector2( -5.96046e-07, -1.54972e-06 )
+scale = Vector2( 0.663, 0.6 )
+texture = ExtResource( 25 )
+offset = Vector2( 600, 600 )
+
+[node name="Area2D" type="Area2D" parent="Map"]
+position = Vector2( 387.632, 293.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Poltavs'ka"
+ajacentTerritories = [ "Cherkas'ka", "Khirovorasa'ka", "Dnipropetrovs'ka", "Kharkivs'ka", "Sums'ka", "Chernihivs'ka", "Kyyivs'ka" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D"]
+position = Vector2( 96, 40 )
+polygon = PoolVector2Array( 5, -20, 17, -23, 29, -26, 48, -20, 81, -22, 87, -11, 96, 10, 102, 13, 116, 10, 116, 30, 141, 42, 152, 58, 141, 68, 141, 82, 123, 84, 123, 96, 93, 102, 83, 116, 86, 134, 76, 128, 58, 127, 48, 123, 34, 124, 21, 120, 6, 121, 1, 113, -2, 99, -10, 67, -14, 62, -25, 42, -31, 23, -38, 9, -44, 0, -38, -7, -32, -11, -15, -11 )
+
+[node name="Control" type="Control" parent="Map/Area2D"]
+margin_left = 86.9997
+margin_top = 49.0001
+margin_right = 127.0
+margin_bottom = 89.0001
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D2" type="Area2D" parent="Map"]
+position = Vector2( 244.344, 400 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Cherkas'ka"
+ajacentTerritories = [ "Poltavs'ka", "Khirovorasa'ka", "Kyyivs'ka", "Vinnyts'ka" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D2"]
+position = Vector2( 127, 93 )
+polygon = PoolVector2Array( 19, -116, 28, -103, 37, -75, 53, -48, 57, -33, 63, -6, 44, -5, 38, -12, 27, -11, 17, 2, 7, 3, -5, -3, -14, 1, -22, 15, -59, 13, -64, 17, -67, 29, -76, 31, -103, 44, -108, 16, -116, 11, -126, -29, -108, -29, -93, -41, -78, -45, -46, -63, -28, -84, -3, -90 )
+
+[node name="Control" type="Control" parent="Map/Area2D2"]
+margin_left = 66.9998
+margin_top = 15.0
+margin_right = 107.0
+margin_bottom = 55.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D2/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D2/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D2/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D2/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D3" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Khirovorasa'ka"
+ajacentTerritories = [ "Poltavs'ka", "Cherkas'ka", "Dnipropetrovs'ka", "Mykolayivs'ka", "Odes'ka", "Vinnyts'ka" ]
+value = 1
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D3"]
+position = Vector2( 30, -79 )
+polygon = PoolVector2Array( -3, -71, 8, -62, 33, -61, 44, -61, 45, -51, 55, -42, 35, -30, 36, -10, 29, -3, 11, 10, -7, 15, -17, 28, -30, 27, -41, 32, -60, 27, -60, 9, -76, 2, -89, 2, -99, -7, -110, -2, -144, 0, -176, -9, -171, -21, -129, -35, -124, -51, -84, -50, -73, -66, -52, -62, -36, -76, -22, -70 )
+
+[node name="Control" type="Control" parent="Map/Area2D3"]
+margin_left = -63.9999
+margin_top = -140.0
+margin_right = -23.9997
+margin_bottom = -99.9998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D3/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D3/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D3/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D3/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D4" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Dnipropetrovs'ka"
+ajacentTerritories = [ "Poltavs'ka", "Khirovorasa'ka", "Kharkivs'ka", "Donets'ka", "Zaporiz'ka", "Khersons'ka", "Mykolayivs'ka" ]
+value = 3
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D4"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -91, -134, -68, -141, -29, -122, -13, -126, 7, -92, 38, -91, 41, -83, 38, -75, 47, -62, 41, -49, 29, -48, 28, -29, 6, -26, -3, -35, -10, -49, -25, -51, -44, -50, -73, -53, -80, -46, -71, -3, -85, -4, -110, 2, -144, 0, -176, -9, -178, -39, -151, -60, -151, -80, -132, -92, -140, -109, -117, -106, -103, -100, -105, -119 )
+
+[node name="Control" type="Control" parent="Map/Area2D4"]
+margin_left = 86.9996
+margin_top = -144.0
+margin_right = 127.0
+margin_bottom = -104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D4/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D4/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D4/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D4/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D5" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Kharkivs'ka"
+ajacentTerritories = [ "Poltavs'ka", "Dnipropetrovs'ka", "Donets'ka", "Luhans'ka", "Russia-1", "Sums'ka" ]
+value = 3
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D5"]
+position = Vector2( 282, -135 )
+polygon = PoolVector2Array( -91, -134, -68, -141, -29, -122, -21, -135, -2, -136, 10, -145, 22, -133, 28, -113, 48, -99, 46, -81, 41, -68, 38, -52, 35, -40, 27, -34, 8, -26, 0, -10, -18, -2, -31, -7, -33, 12, -52, 13, -70, -21, -89, -16, -127, -33, -126, -43, -110, -45, -106, -59, -99, -69, -103, -80, -112, -89, -132, -100, -132, -120, -112, -125 )
+
+[node name="Control" type="Control" parent="Map/Area2D5"]
+margin_left = 187.999
+margin_top = -252.0
+margin_right = 228.0
+margin_bottom = -212.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D5/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D5/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D5/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D5/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D6" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Donets'ka"
+ajacentTerritories = [ "Kharkivs'ka", "Luhans'ka", "Russia-2", "Dnipropetrovs'ka", "Zaporiz'ka" ]
+value = 4
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D6"]
+position = Vector2( 396, -2.00006 )
+polygon = PoolVector2Array( -102, -155, -75.0001, -170, -66.0001, -147, -55.0001, -135, -54.0001, -109, -39.0001, -86, -23.0001, -70, -9.00006, -63, -6.00006, -52, -19.0001, -52, -28.0001, -34, -52.0001, -30, -56.0001, 13, -120, 29, -118, 25, -124, 16, -130, 1, -114, -7, -113, -18, -138, -33, -146, -49, -145, -70, -131, -73, -125, -84, -132, -97, -132, -118, -141, -120, -141, -133, -128, -130, -110, -139 )
+
+[node name="Control" type="Control" parent="Map/Area2D6"]
+margin_left = 258.999
+margin_top = -103.0
+margin_right = 298.999
+margin_bottom = -62.9998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D6/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D6/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D6/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D6/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D7" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Russia-1"
+ajacentTerritories = [ "Kharkivs'ka", "Luhans'ka", "Russia-2", "Sums'ka", "Chernihivs'ka" ]
+type = "Russia"
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D7"]
+position = Vector2( 429, -303 )
+polygon = PoolVector2Array( 38.9999, 36, -33.0001, 68, -49.0001, 73, -61.0001, 63, -87.0001, 52, -98.0001, 66, -117, 50, -119, 33, -133, 21, -164, 28, -179, 42, -185, 33, -197, 33, -215, 20, -236, 26, -247, 16, -248, -13, -267, -49, -314, -55, -319, -89, -303, -95, -323, -122, -340, -155, -358, -154, -382, -158, -398, -145, -425, -155, -434, -131, -455, -127, -471, -150, -473, -175, -323, -171, 39.9999, -176 )
+
+[node name="Control" type="Control" parent="Map/Area2D7"]
+margin_left = 269.999
+margin_top = -376.999
+margin_right = 309.999
+margin_bottom = -336.999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D7/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D7/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D7/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D7/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D8" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Luhans'ka"
+ajacentTerritories = [ "Russia-1", "Russia-2", "Donets'ka", "Kharkivs'ka" ]
+value = 2
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D8"]
+position = Vector2( 489.924, -96.6755 )
+scale = Vector2( 0.987109, 0.967723 )
+polygon = PoolVector2Array( -55.9999, -18, -51.9999, -5, -56.9999, 5, -50.9999, 11, -56.9999, 23, -61.9999, 47, -97.9999, 44, -99.9999, 31, -118, 25, -124, 16, -143, -8, -149, -46, -161, -56, -168, -79, -160, -136, -150, -150, -139, -140, -125, -141, -108, -126, -96.9999, -132, -88.9999, -121, -72.9999, -120, -68.9999, -111, -60.9999, -107, -46.9999, -108, -39.9999, -107, -43.9999, -100, -35.9999, -89, -51.9999, -64, -65.9999, -59, -62.9999, -47, -42.9999, -44, -45.9999, -36, -60.9999, -37, -65.9999, -19 )
+
+[node name="Control" type="Control" parent="Map/Area2D8"]
+margin_left = 328.999
+margin_top = -195.0
+margin_right = 368.999
+margin_bottom = -155.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D8/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D8/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D8/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D8/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D9" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Russia-2"
+ajacentTerritories = [ "Russia-1", "Russia-3", "Luhans'ka", "Donets'ka" ]
+type = "Russia"
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D9"]
+position = Vector2( 611, -91.0001 )
+scale = Vector2( 0.987109, 0.967723 )
+polygon = PoolVector2Array( -145.881, 114.702, -206.664, 113.669, -207.677, 91.9684, -222.873, 87.835, -236.043, 99.2019, -269.474, 100.235, -265.422, 64.0679, -244.147, 58.9011, -235.03, 40.3008, -220.847, 43.4008, -185.39, 44.4342, -178.298, 39.2674, -174.246, 14.4669, -166.142, 3.10004, -171.207, -10.3336, -174.246, -25.8339, -184.821, -28.6909, -182.351, -42.3675, -166.142, -41.3341, -163.103, -53.7344, -182.351, -55.8011, -182.351, -65.1013, -168.168, -74.4015, -159.05, -80.6016, -157.024, -94.0352, -158.037, -117.802, -181.338, -117.802, -215.782, -144.669, -143.854, -180.837 )
+
+[node name="Control" type="Control" parent="Map/Area2D9"]
+margin_left = 358.999
+margin_top = -58.9999
+margin_right = 398.999
+margin_bottom = -18.9999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D9/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D9/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D9/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D9/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D10" type="Area2D" parent="Map"]
+position = Vector2( 488.688, 800 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Russia-3"
+ajacentTerritories = [ "Republica Krym", "Russia-2" ]
+type = "Russia"
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D10"]
+position = Vector2( 618, 128 )
+scale = Vector2( 0.987109, 0.967723 )
+polygon = PoolVector2Array( -145.881, 114.702, -206.664, 113.669, -258.33, 114.702, -281.631, 106.435, -301.892, 78.5349, -314.048, 86.8017, -331.27, 76.4681, -338.362, 56.8345, -368.754, 48.5676, -367.741, 34.1006, -308.983, 35.134, -307.97, 2.06671, -294.8, -28.9339, -281.631, -36.1674, -264.409, -40.3008, -296.826, -58.9011, -304.931, -81.6349, -267.448, -97.1352, -234.017, -113.669, -177.285, -107.469, -148.92, -107.469 )
+
+[node name="Control" type="Control" parent="Map/Area2D10"]
+margin_left = 349.999
+margin_top = 92.9998
+margin_right = 389.999
+margin_bottom = 133.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D10/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D10/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D10/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D10/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D11" type="Area2D" parent="Map"]
+position = Vector2( 429.864, 113.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Sums'ka"
+ajacentTerritories = [ "Russia-1", "Kharkivs'ka", "Poltavs'ka", "Chernihivs'ka" ]
+value = 1
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D11"]
+position = Vector2( 96, 40 )
+polygon = PoolVector2Array( 38.9996, -65.9998, 44.9996, -43.9998, 56.9995, -40.9998, 62.9995, -26.9998, 48, -20, 54.9995, 17.0001, 73.9995, 22.0001, 91.9995, 24.0001, 106.999, 35, 119.999, 54, 123, 84, 123, 96, 104.999, 113, 69.9995, 119, 54.9995, 82.9999, 19.9996, 82.9999, 1.99969, 78.9999, -15.0002, 82.9999, -12.0003, 65, -4.00027, 51, -8.00027, 36, -20.0002, 24.0001, -9.00027, -0.999886, -8.00027, -35.9998, 4.99969, -48.9998, 10.9997, -73.9997, 25.9996, -80.9997 )
+
+[node name="Control" type="Control" parent="Map/Area2D11"]
+margin_left = 86.9997
+margin_top = 49.0001
+margin_right = 127.0
+margin_bottom = 89.0001
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D11/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D11/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D11/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D11/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D12" type="Area2D" parent="Map"]
+position = Vector2( 251.885, 49.9997 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Chernihivs'ka"
+ajacentTerritories = [ "Russia-1", "Sums'ka", "Poltavs'ka", "Kyyivs'ka" ]
+value = 1
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D12"]
+position = Vector2( 96, 40 )
+polygon = PoolVector2Array( 58.9995, -21.9999, 65.9995, -42.9998, 93.9995, -34.9998, 109.999, -48.9998, 119.999, -36.9998, 117.999, -11.9999, 104.999, -0.999893, 107.999, 31, 92.9995, 64, 109.999, 76.9999, 102.999, 121, 76.9995, 132, 58.9995, 131, 48.9996, 136, 38.9996, 111, 16.9997, 122, -3.00027, 115, -8.00027, 99.9999, -32.0002, 96.9999, -42.0002, 51, -37.0002, 40, -43.0002, 23.0001, -38.0002, 10.0001, -22.0002, -14.9999, -21.0002, -20.9999, 3.99969, -24.9998, 39.9996, -17.9999 )
+
+[node name="Control" type="Control" parent="Map/Area2D12"]
+margin_left = 86.9997
+margin_top = 49.0001
+margin_right = 127.0
+margin_bottom = 89.0001
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D12/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D12/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D12/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D12/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D13" type="Area2D" parent="Map"]
+position = Vector2( 574.661, 961.667 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Zaporiz'ka"
+ajacentTerritories = [ "Donets'ka", "Dnipropetrovs'ka", "Khersons'ka" ]
+value = 3
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D13"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -123.001, -106, -132, -144, -68, -141, -56.0007, -121, -29, -122, -23.0008, -104, -5.00085, -96.9997, 1.99915, -87.9997, -13.0009, -74.9998, -3.00085, -47.9998, -20.0008, -35.9998, -63.0007, -26.9998, -86.0006, -10.9999, -113.001, -2.99988, -132, -12.9999, -141, -20.9999, -134, -38.9998, -147, -54.9998, -147, -74.9998, -162, -81.9997, -164, -89.9997, -144, -98.9997, -131, -95.9997 )
+
+[node name="Control" type="Control" parent="Map/Area2D13"]
+margin_left = 86.9996
+margin_top = -144.0
+margin_right = 127.0
+margin_bottom = -104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D13/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D13/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D13/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D13/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D14" type="Area2D" parent="Map"]
+position = Vector2( 378.583, 1080 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Khersons'ka"
+ajacentTerritories = [ "Republica Krym", "Zaporiz'ka", "Dnipropetrovs'ka", "Mykolayivs'ka" ]
+value = 1
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D14"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -104.001, -117, -109.001, -134, -98.0005, -143, -97.0005, -163, -78.0006, -168, -40.0007, -160, -25.0008, -144, -21.0008, -126, -7.00082, -111, -13.0008, -90.9997, 12.9991, -63.9998, -0.000823975, -58.9998, -3.00085, -47.9998, -19.0008, -56.9998, -64.0006, -56.9998, -82.0006, -44.9998, -125, -48.9998, -146, -45.9998, -179, -64.9997, -162, -74.9997, -170, -82.9997, -160, -99.9996, -138, -109, -119, -104 )
+
+[node name="Control" type="Control" parent="Map/Area2D14"]
+margin_left = 105.0
+margin_top = -161.0
+margin_right = 145.0
+margin_bottom = -121.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D14/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D14/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D14/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D14/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D15" type="Area2D" parent="Map"]
+position = Vector2( 411.765, 1268.33 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Republica Krym"
+ajacentTerritories = [ "Russia-3", "Sevastopol", "Khersons'ka" ]
+value = 3
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D15"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -109.001, -134, -98.0005, -143, -97.0005, -163, -78.0006, -168, -40.0007, -160, -25.0008, -144, -15.0008, -126, -10.0008, -102, 1.99915, -93.9998, 57.999, -106, 77.9989, -103, 66.999, -73.9999, 29.999, -73.9999, 11.9991, -77.9999, 4.99911, -65.9999, -14.0008, -57.9999, -43.0007, -50.9999, -73.0006, -23, -70.0007, -59.9999, -73.0006, -74.9999, -102.001, -82.9999, -129, -96.9998, -151, -96.9998, -159, -103, -128, -126 )
+
+[node name="Control" type="Control" parent="Map/Area2D15"]
+margin_left = 94.9996
+margin_top = -164.0
+margin_right = 135.0
+margin_bottom = -124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D15/Control"]
+margin_left = -1.0
+margin_top = 14.0
+margin_right = 86.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D15/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D15/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D15/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D16" type="Area2D" parent="Map"]
+position = Vector2( 360.483, 1355 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Sevastopol"
+ajacentTerritories = [ "Republica Krym" ]
+value = 1
+type = "Russia"
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D16"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -97.0006, -127, -44.0007, -128, -43.0007, -74.9999, -97.0006, -73.9999 )
+
+[node name="Control" type="Control" parent="Map/Area2D16"]
+margin_left = 96.9996
+margin_top = -164.0
+margin_right = 137.0
+margin_bottom = -124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D16/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D16/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D16/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D16/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D17" type="Area2D" parent="Map"]
+position = Vector2( 458.522, 938.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Mykolayivs'ka"
+ajacentTerritories = [ "Khersons'ka", "Dnipropetrovs'ka", "Khirovorasa'ka", "Odes'ka" ]
+value = 1
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D17"]
+position = Vector2( 30, -79 )
+polygon = PoolVector2Array( -19.0002, -49.9998, 3.99973, -51.9998, 27.9997, -70.9997, 28.9997, -37.9998, 35, -30, 36, -10, 20.9997, 5.00015, 28.9997, 15.0001, 26.9997, 25.0001, 18.9997, 28.0001, 9.99973, 28.0001, -0.000244141, 27.0001, -21.0002, 33.0001, -37.0002, 53, -77, 46, -83, 19.0001, -71.0001, 13.0001, -76, 2, -79, -7.99985, -94, -14.9998, -92, -23.9998, -93, -30.9998, -120, -40.9998, -128, -60.9997, -132, -74.9997, -125, -80.9997, -79, -85.9997, -72.0001, -78.9997, -42.0001, -71.9997, -44.0001, -54.9997 )
+
+[node name="Control" type="Control" parent="Map/Area2D17"]
+margin_left = -63.9999
+margin_top = -140.0
+margin_right = -23.9997
+margin_bottom = -99.9998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D17/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D17/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D17/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D17/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D18" type="Area2D" parent="Map"]
+position = Vector2( 331.825, 938.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Odes'ka"
+ajacentTerritories = [ "Mykolayivs'ka", "Khirovorasa'ka", "Vinnyts'ka" ]
+value = 2
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D18"]
+position = Vector2( 30, -79 )
+polygon = PoolVector2Array( -13.0002, -30.9998, -9.00017, -11.9998, 2.9998, -4.99985, 8.99979, 12.0001, -2.00018, 20.0001, 3.99979, 45, -32.0001, 87, -66, 114, -97.9999, 145, -139, 159, -157, 156, -164, 141, -150, 139, -148, 125, -121, 99, -123, 70, -125, 61, -110, 55, -109.298, 69.7509, -68, 69, -54, 64, -64, 56, -67, 29.0001, -83, 19.0001, -87.9999, 12.0001, -84, -9.99982, -110, -27.9998, -105, -60.9997, -114, -67.9997, -124, -69.9997, -113, -79.9997, -85, -76.9997, -63, -87.9997, -49.0001, -82.9997, -49.0001, -62.9997, -38.0001, -39.9998 )
+
+[node name="Control" type="Control" parent="Map/Area2D18"]
+margin_left = -62.9999
+margin_top = -112.0
+margin_right = -22.9997
+margin_bottom = -71.9996
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D18/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D18/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D18/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D18/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D19" type="Area2D" parent="Map"]
+position = Vector2( 98.0393, 290 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Kyyivs'ka"
+ajacentTerritories = [ "Chernihivs'ka", "Poltavs'ka", "Cherkas'ka", "Vinnyts'ka", "Zhytomyrs'ka", "Kyiv" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D19"]
+position = Vector2( 95.9997, 41 )
+polygon = PoolVector2Array( 23.9999, 19, 79.9998, 20, 78.9998, -33.9999, 23.9999, -33.9999, -4.99998, -72.9998, -12, -84.9998, -7.99998, -97.9998, 7.99997, -112, 9.99997, -106, 20.9999, -109, 37.9999, -110, 44.9999, -94.9998, 55.9998, -88.9998, 60.9998, -67.9999, 70.9998, -46.9999, 91.9997, -44.9999, 99.9997, -23.9999, 112, -21, 139, -26.9999, 150, -3.99998, 125, 26, 99.9997, 29.9999, 80.9998, 54.9999, 37.9999, 72.9999, 21.9999, 85.9998, 1, 87.9998, -12, 59.9999, 4.99998, 33.9999, 11, 14, 1.99968, -8, -3.00031, -26, 2.99968, -39.9999, -5.00029, -72.9999, 23.9999, -33.9999 )
+
+[node name="Control" type="Control" parent="Map/Area2D19"]
+margin_left = 86.9997
+margin_top = 49.0001
+margin_right = 127.0
+margin_bottom = 89.0001
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D19/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D19/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D19/Control"]
+margin_left = 26.9999
+margin_top = 39.9999
+margin_right = 128.0
+margin_bottom = 53.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D19/Control"]
+margin_left = 26.9999
+margin_top = 49.9999
+margin_right = 128.0
+margin_bottom = 63.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D20" type="Area2D" parent="Map"]
+position = Vector2( 185.521, 706.667 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Vinnyts'ka"
+ajacentTerritories = [ "Odes'ka", "Khirovorasa'ka", "Cherkas'ka", "Kyyivs'ka", "Zhytomyrs'ka", "Khmel'ka" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D20"]
+position = Vector2( 30, -79 )
+polygon = PoolVector2Array( -3, -71, -1.00021, -51.9997, 15.9997, 1.00018, 25.9997, 9.00015, 27.9997, 30.0001, 22.9997, 35.0001, 12.9997, 57.0001, -31.0001, 58.0001, -78, 41.0001, -112, 28.0001, -116, -17.9998, -105, -28.9998, -90, -27.9998, -96, -58.9997, -90, -82.9996, -34.0001, -94.9996, -25.0002, -79.9996, -22, -70 )
+
+[node name="Control" type="Control" parent="Map/Area2D20"]
+margin_left = -62.9999
+margin_top = -125.0
+margin_right = -22.9997
+margin_bottom = -84.9998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D20/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D20/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D20/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D20/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D21" type="Area2D" parent="Map"]
+position = Vector2( 95.0229, 558.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Kyiv"
+ajacentTerritories = [ "Kyyivs'ka" ]
+value = 2
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D21"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -97.0006, -127, -45.0007, -126, -43.0007, -74.9999, -97.0005, -76.9997 )
+
+[node name="Control" type="Control" parent="Map/Area2D21"]
+margin_left = 96.9996
+margin_top = -164.0
+margin_right = 137.0
+margin_bottom = -124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D21/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D21/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D21/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D21/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D22" type="Area2D" parent="Map"]
+position = Vector2( 168.929, 448.333 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Zhytomyrs'ka"
+ajacentTerritories = [ "Kyyivs'ka", "Vinnyts'ka", "Khmel'ka" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D22"]
+position = Vector2( 30, -79 )
+polygon = PoolVector2Array( -4.00021, -99.9997, 5.99976, -75.9997, 3.99976, -51.9998, 14.9997, -24.9998, 12.9997, 2.00012, 25.9997, 36, 6.99976, 79, -8.00021, 82, -17.0002, 60, -29.0001, 57, -79, 69, -95, 56, -91, 33.0001, -111, 15.0001, -116, -40.9998, -102, -59.9998, -95, -81.9997, -82, -85.9997, -80, -98.9997, -72, -91.9997, -59.0001, -99.9997, -51.0001, -87.9997, -40.0001, -94.9997, -32.0001, -82.9997, -25.0002, -79.9996, -22.0002, -90.9997 )
+
+[node name="Control" type="Control" parent="Map/Area2D22"]
+margin_left = -62.9999
+margin_top = -125.0
+margin_right = -22.9997
+margin_bottom = -84.9998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D22/Control"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D22/Control"]
+margin_top = 29.9999
+margin_right = 101.0
+margin_bottom = 43.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D22/Control"]
+margin_left = 28.9999
+margin_top = 41.9999
+margin_right = 130.0
+margin_bottom = 55.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D22/Control"]
+margin_left = 28.9999
+margin_top = 51.9999
+margin_right = 130.0
+margin_bottom = 65.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D23" type="Area2D" parent="Map"]
+position = Vector2( -182.503, 681.667 )
+scale = Vector2( 1.5083, 1.66667 )
+script = ExtResource( 24 )
+territoryName = "Khmel'ka"
+ajacentTerritories = [ "Vinnyts'ka", "Zhytomyrs'ka" ]
+debug = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D23"]
+position = Vector2( 220, -26.0001 )
+polygon = PoolVector2Array( -98.0005, -304.999, -76.0006, -302.999, -70.0006, -285.999, -50.0007, -289.999, -61.0006, -253.999, -74.0006, -238.999, -75.0006, -218.999, -72.0006, -175.999, -50.0007, -158, -50.0007, -131, -42.0007, -118, -39.0007, -68.9997, -43.0007, -69.9997, -64.0006, -62.9997, -64.0006, -4.99985, -98.0005, 0.000152588 )
+
+[node name="Control" type="Control" parent="Map/Area2D23"]
+margin_left = 105.0
+margin_top = -164.0
+margin_right = 145.0
+margin_bottom = -124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountryName" type="Label" parent="Map/Area2D23/Control"]
+margin_left = 16.0
+margin_top = 14.0
+margin_right = 114.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlledBy" type="Label" parent="Map/Area2D23/Control"]
+margin_left = 3.05176e-05
+margin_top = 25.9999
+margin_right = 101.0
+margin_bottom = 39.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "Russian Controlled"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RussiaUnits" type="Label" parent="Map/Area2D23/Control"]
+margin_left = 29.0
+margin_top = 34.9999
+margin_right = 130.0
+margin_bottom = 48.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "RU : 0(2 SF)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UkraineUnits" type="Label" parent="Map/Area2D23/Control"]
+margin_left = 29.0
+margin_top = 44.9999
+margin_right = 130.0
+margin_bottom = 58.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "UA : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BelarusName" type="Label" parent="Map"]
+margin_left = -24.1327
+margin_top = 36.6667
+margin_right = 256.867
+margin_bottom = 76.6667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 44 )
+text = "Belarus"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BelarusName2" type="Label" parent="Map"]
+margin_left = -16.5913
+margin_top = 711.667
+margin_right = 264.409
+margin_bottom = 751.667
+rect_pivot_offset = Vector2( -238.311, 483.333 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 44 )
+text = "Moldova"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BelarusName3" type="Label" parent="Map"]
+margin_left = -61.8401
+margin_top = 1080.0
+margin_right = 219.16
+margin_bottom = 1120.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 44 )
+text = "Romania"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffortHolder" type="Sprite" parent="."]
+visible = false
+position = Vector2( 398.75, 360.5 )
+scale = Vector2( 1.3275, 1.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 7 )
+
+[node name="TerritoryHolder" type="Sprite" parent="."]
+visible = false
+position = Vector2( 398.8, 360 )
+scale = Vector2( 1.32733, 1.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 30 )
+
+[node name="Label" type="Label" parent="TerritoryHolder"]
+margin_left = -299.0
+margin_top = -298.0
+margin_right = -4.0
+margin_bottom = -238.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Territory name"
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="TerritoryHolder"]
+visible = false
+margin_left = -299.699
+margin_top = 24.1667
+margin_right = 286.301
+margin_bottom = 104.167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 28 )
+text = "Roll x or less to 
+neutrilise Irregular"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KineticBattle" type="Button" parent="TerritoryHolder"]
+visible = false
+margin_left = -167.293
+margin_top = 150.333
+margin_right = -28.2933
+margin_bottom = 180.333
+custom_fonts/font = SubResource( 6 )
+text = "Kinetic Battle"
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SymbolicBattle" type="Button" parent="TerritoryHolder"]
+visible = false
+margin_left = 6.74033
+margin_top = 150.333
+margin_right = 149.74
+margin_bottom = 180.333
+custom_fonts/font = SubResource( 6 )
+text = "Symbolic  Battle"
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="TerritoryHolder"]
+margin_left = -72.3659
+margin_top = 222.0
+margin_right = 66.6341
+margin_bottom = 252.0
+custom_fonts/font = SubResource( 6 )
+text = "Close"
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Die" type="Node2D" parent="TerritoryHolder"]
+visible = false
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="TerritoryHolder/Die"]
+position = Vector2( -7.34555, 162.5 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="TerritoryHolder/Die"]
+
+[node name="Button3" type="Button" parent="TerritoryHolder"]
+visible = false
+margin_left = -72.3659
+margin_top = 179.5
+margin_right = 66.6341
+margin_bottom = 209.5
+custom_fonts/font = SubResource( 6 )
+text = "Roll Die"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cancel" type="Button" parent="TerritoryHolder"]
+visible = false
+margin_left = -72.3659
+margin_top = 222.0
+margin_right = 66.6341
+margin_bottom = 252.0
+custom_fonts/font = SubResource( 6 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpinionHolder" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.33, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 13 )
+
+[node name="Title" type="Label" parent="OpinionHolder"]
+margin_right = 586.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 327.547, 39.1667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "DIPLOMACY"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="OpinionHolder"]
+position = Vector2( 283.459, 318 )
+scale = Vector2( 6.075, 0.8 )
+texture = ExtResource( 51 )
+
+[node name="Sprite2" type="Sprite" parent="OpinionHolder"]
+position = Vector2( 283.459, 238 )
+scale = Vector2( 6.075, 0.8 )
+texture = ExtResource( 53 )
+
+[node name="Sprite3" type="Sprite" parent="OpinionHolder"]
+position = Vector2( 283.459, 158 )
+scale = Vector2( 6.075, 0.8 )
+texture = ExtResource( 52 )
+
+[node name="US" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( -66.9173, 91.6667 )
+script = ExtResource( 21 )
+
+[node name="US Token" type="Sprite" parent="OpinionHolder/US"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 17 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/US"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="DE" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( -127.068, 91.6667 )
+script = ExtResource( 21 )
+token = "DE"
+
+[node name="DE Token" type="Sprite" parent="OpinionHolder/DE"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 38 )
+script = ExtResource( 18 )
+tokenName = "DE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/DE"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="PL" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( -6.767, 91.6667 )
+script = ExtResource( 21 )
+token = "PL"
+
+[node name="PL Token" type="Sprite" parent="OpinionHolder/PL"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 39 )
+script = ExtResource( 18 )
+tokenName = "PL"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/PL"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="GB" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( 54.1353, 91.6667 )
+script = ExtResource( 21 )
+token = "GB"
+
+[node name="PL Token" type="Sprite" parent="OpinionHolder/GB"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 68 )
+script = ExtResource( 18 )
+tokenName = "GB"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/GB"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="FR" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( 236.09, 91.6667 )
+script = ExtResource( 21 )
+token = "FR"
+
+[node name="DE Token" type="Sprite" parent="OpinionHolder/FR"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 70 )
+script = ExtResource( 18 )
+tokenName = "FR"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/FR"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="RO" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( 113.534, 91.6667 )
+script = ExtResource( 21 )
+token = "RO"
+
+[node name="PL Token" type="Sprite" parent="OpinionHolder/RO"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 71 )
+script = ExtResource( 18 )
+tokenName = "RO"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/RO"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="BY" type="KinematicBody2D" parent="OpinionHolder"]
+position = Vector2( 174.436, 91.6667 )
+script = ExtResource( 21 )
+token = "BY"
+
+[node name="PL Token" type="Sprite" parent="OpinionHolder/BY"]
+position = Vector2( 297, 259 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 69 )
+script = ExtResource( 18 )
+tokenName = "BY"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpinionHolder/BY"]
+position = Vector2( 297, 258.5 )
+shape = SubResource( 1 )
+
+[node name="Control" type="Control" parent="OpinionHolder"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Die1" type="Node2D" parent="OpinionHolder/Control"]
+visible = false
+position = Vector2( 6.76692, 57.5 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="OpinionHolder/Control/Die1"]
+position = Vector2( 473.684, 878.333 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="OpinionHolder/Control/Die1"]
+
+[node name="Die2" type="Node2D" parent="OpinionHolder/Control"]
+visible = false
+position = Vector2( 6.76692, 57.5 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="OpinionHolder/Control/Die2"]
+position = Vector2( 569.925, 878.333 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="OpinionHolder/Control/Die2"]
+
+[node name="Die3" type="Node2D" parent="OpinionHolder/Control"]
+visible = false
+position = Vector2( 6.76692, 57.5 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="OpinionHolder/Control/Die3"]
+position = Vector2( 667.669, 878.333 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="OpinionHolder/Control/Die3"]
+
+[node name="Container" type="Container" parent="OpinionHolder/Control"]
+margin_left = -3.0
+margin_top = 35.6667
+margin_right = 71.0
+margin_bottom = 98.6667
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftArrow" type="Sprite" parent="OpinionHolder/Control/Container"]
+position = Vector2( 239, 443 )
+rotation = 1.5708
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+value = -1
+valueName = "RPLable"
+
+[node name="RightArrow" type="Sprite" parent="OpinionHolder/Control/Container"]
+position = Vector2( 349, 443 )
+rotation = -1.5708
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+valueName = "RPLable"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OpinionHolder/Control/Container"]
+light_mask = 0
+margin_left = 269.0
+margin_top = 431.0
+margin_right = 312.0
+margin_bottom = 461.0
+rect_scale = Vector2( 2, 2 )
+rect_clip_content = false
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "n RP"
+tab_size = 5
+text = "n RP"
+fit_content_height = true
+scroll_active = false
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftArrow2" type="Sprite" parent="OpinionHolder/Control/Container"]
+position = Vector2( 239, 483 )
+rotation = 1.5708
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+value = -1
+
+[node name="RightArrow2" type="Sprite" parent="OpinionHolder/Control/Container"]
+position = Vector2( 349, 483 )
+rotation = -1.5708
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="OpinionHolder/Control/Container"]
+light_mask = 0
+margin_left = 269.0
+margin_top = 471.0
+margin_right = 312.0
+margin_bottom = 501.0
+rect_scale = Vector2( 2, 2 )
+rect_clip_content = false
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "n RP"
+tab_size = 5
+text = "n RP"
+fit_content_height = true
+scroll_active = false
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+valueName = "PP"
+
+[node name="Button" type="Button" parent="OpinionHolder/Control"]
+margin_left = 219.549
+margin_top = 540.0
+margin_right = 367.549
+margin_bottom = 586.0
+text = "Attempt Move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="OpinionHolder/Control"]
+visible = false
+margin_left = 219.549
+margin_top = 540.0
+margin_right = 367.549
+margin_bottom = 586.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="OpinionHolder/Control"]
+margin_top = 403.0
+margin_right = 587.0
+margin_bottom = 458.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 40 )
+text = "Minimum points required to attempt a move is 0  amount selcted is 0
+To successfully move. roll xd6, if the total is less then
+ or equal to 0 the country is moved"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="OpinionHolder"]
+visible = false
+margin_left = 151.128
+margin_top = 512.5
+margin_right = 439.128
+margin_bottom = 577.5
+custom_fonts/font = SubResource( 15 )
+text = "Roll for resource points!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle" type="Label" parent="OpinionHolder"]
+margin_top = 48.0
+margin_right = 586.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Use resorce points to improve relations with other countries"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle2" type="Label" parent="OpinionHolder"]
+margin_top = 68.0
+margin_right = 586.0
+margin_bottom = 134.0
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Please roll for resource points!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle3" type="Label" parent="OpinionHolder"]
+margin_left = 6.76692
+margin_top = 125.0
+margin_right = 104.767
+margin_bottom = 191.0
+rect_pivot_offset = Vector2( 75.188, 33.3333 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "INTERVENTION"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle4" type="Label" parent="OpinionHolder"]
+margin_left = 6.76692
+margin_top = 206.667
+margin_right = 104.767
+margin_bottom = 272.667
+rect_pivot_offset = Vector2( 75.188, 33.3333 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "SUPPORT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle5" type="Label" parent="OpinionHolder"]
+margin_left = 6.76692
+margin_top = 285.833
+margin_right = 104.767
+margin_bottom = 351.833
+rect_pivot_offset = Vector2( 75.188, 33.3333 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "NEUTRAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MillitaryHolder" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 22 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 23 )
+
+[node name="ReserveTitle" type="Label" parent="MillitaryHolder"]
+margin_right = 586.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 22 )
+text = "Reserve"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtitle" type="Label" parent="MillitaryHolder/ReserveTitle"]
+margin_top = 32.5
+margin_right = 586.0
+margin_bottom = 56.5
+custom_fonts/font = SubResource( 23 )
+text = "Click on a unit to mobilize it, doing so costs 1 resource point"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReserveTitle2" type="Label" parent="MillitaryHolder"]
+margin_top = 300.0
+margin_right = 586.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 22 )
+text = "Mobilized Units"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtitle" type="Label" parent="MillitaryHolder/ReserveTitle2"]
+margin_top = 32.5
+margin_right = 586.0
+margin_bottom = 56.5
+custom_fonts/font = SubResource( 23 )
+text = "Click on a unit to place it on the map, doing so costs 1 resource point
+for regular unit it also costs 1 presteige"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="MillitaryHolder"]
+margin_left = 101.887
+margin_top = 559.167
+margin_right = 460.887
+margin_bottom = 598.167
+custom_fonts/font = SubResource( 24 )
+text = "Roll for resource points to spend"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourceTracker" type="Label" parent="MillitaryHolder"]
+visible = false
+margin_left = 2.0
+margin_top = 554.0
+margin_right = 586.0
+margin_bottom = 598.0
+custom_fonts/font = SubResource( 25 )
+text = "You Have x resource points to spend"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InformationHolder" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 32 )
+
+[node name="IncreasePresteige" type="Button" parent="InformationHolder"]
+margin_left = 24.0
+margin_top = 230.0
+margin_right = 194.0
+margin_bottom = 317.0
+text = "Increase Prestige"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="InformationHolder"]
+margin_left = 204.0
+margin_top = 230.0
+margin_right = 374.0
+margin_bottom = 317.0
+text = "Neutralize Enemy Units"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InformationHolder/Button"]
+margin_left = -206.0
+margin_top = -188.0
+margin_right = 382.0
+margin_bottom = -142.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Select one of the options below"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReducePresteige" type="Button" parent="InformationHolder"]
+margin_left = 384.0
+margin_top = 230.0
+margin_right = 554.0
+margin_bottom = 317.0
+text = "Reduce Enemy Prestige"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IncreaseScreen" type="Control" parent="InformationHolder"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InformationHolder/IncreaseScreen"]
+margin_right = 588.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Roll on effort card to see how 
+much prestege you gaine"
+align = 1
+
+[node name="1" type="Label" parent="InformationHolder/IncreaseScreen"]
+visible = false
+margin_top = 229.167
+margin_right = 588.0
+margin_bottom = 317.167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "You rolled x on the effort chat
+and gained x presteige"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roll" type="Button" parent="InformationHolder/IncreaseScreen"]
+margin_left = 204.0
+margin_top = 230.0
+margin_right = 374.0
+margin_bottom = 317.0
+text = "Roll on effort chart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseIncrease" type="Button" parent="InformationHolder/IncreaseScreen"]
+visible = false
+margin_left = 216.0
+margin_top = 508.0
+margin_right = 365.0
+margin_bottom = 555.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReduceScreen" type="Control" parent="InformationHolder"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InformationHolder/ReduceScreen"]
+margin_right = 588.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Roll on effort card twice to see how 
+much prestege both people lose"
+align = 1
+
+[node name="Reduce1" type="Label" parent="InformationHolder/ReduceScreen"]
+visible = false
+margin_top = 175.0
+margin_right = 588.0
+margin_bottom = 263.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "You rolled x on the effort chat
+and gained x presteige"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RollReduce1" type="Button" parent="InformationHolder/ReduceScreen"]
+margin_left = 204.0
+margin_top = 169.167
+margin_right = 374.0
+margin_bottom = 256.167
+rect_pivot_offset = Vector2( 40.5283, 55.8333 )
+text = "Roll on effort chart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reduce2" type="Label" parent="InformationHolder/ReduceScreen"]
+visible = false
+margin_top = 295.0
+margin_right = 588.0
+margin_bottom = 383.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "You rolled x on the effort chat
+and gained x presteige"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RollReduce2" type="Button" parent="InformationHolder/ReduceScreen"]
+margin_left = 204.0
+margin_top = 287.5
+margin_right = 374.0
+margin_bottom = 374.5
+rect_pivot_offset = Vector2( 40.5283, 55.8333 )
+text = "Roll on effort chart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reduce3" type="Label" parent="InformationHolder/ReduceScreen"]
+visible = false
+margin_top = 388.333
+margin_right = 588.0
+margin_bottom = 476.333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "You lose x presteige
+Your enemy losses x presteige"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseReduce" type="Button" parent="InformationHolder/ReduceScreen"]
+visible = false
+margin_left = 216.0
+margin_top = 508.0
+margin_right = 365.0
+margin_bottom = 555.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NeutralizScreen" type="Control" parent="InformationHolder"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InformationHolder/NeutralizScreen"]
+margin_right = 587.0
+margin_bottom = 126.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Roll on effort card to see how 
+much you have to roll to 
+neutrilize enemies"
+align = 1
+
+[node name="1" type="Label" parent="InformationHolder/NeutralizScreen"]
+visible = false
+margin_top = 229.167
+margin_right = 588.0
+margin_bottom = 317.167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "You rolled x on the effort chat
+and gained x presteige"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RollNeutralize" type="Button" parent="InformationHolder/NeutralizScreen"]
+margin_left = 204.0
+margin_top = 230.0
+margin_right = 374.0
+margin_bottom = 317.0
+text = "Roll on effort chart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseNeutralize" type="Button" parent="InformationHolder/NeutralizScreen"]
+visible = false
+margin_left = 216.0
+margin_top = 508.0
+margin_right = 365.0
+margin_bottom = 555.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Turn Type Pick" type="Sprite" parent="."]
+visible = false
+position = Vector2( 398.75, 360.5 )
+scale = Vector2( 1.327, 1.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 44 )
+
+[node name="Label" type="Label" parent="Turn Type Pick"]
+margin_left = -299.0
+margin_top = -252.833
+margin_right = 287.0
+margin_bottom = -185.833
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 41 )
+text = "Select what turn you would like this turn"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MillitarySelected" type="Label" parent="Turn Type Pick"]
+visible = false
+margin_left = -138.619
+margin_top = -115.667
+margin_right = -17.6185
+margin_bottom = -72.6667
+rect_pivot_offset = Vector2( -181.464, 15.2504 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Selected"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Millitary" type="Sprite" parent="Turn Type Pick"]
+position = Vector2( -77.8599, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 41 )
+
+[node name="MillitaryArea" type="Area2D" parent="Turn Type Pick/Millitary"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turn Type Pick/Millitary/MillitaryArea"]
+position = Vector2( -1.08011, -6.10352e-05 )
+shape = SubResource( 10 )
+
+[node name="DiplomaticSelected" type="Label" parent="Turn Type Pick"]
+visible = false
+margin_left = 21.1403
+margin_top = -115.667
+margin_right = 142.14
+margin_bottom = -72.6667
+rect_pivot_offset = Vector2( -181.464, 15.2504 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Selected"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Diplomatic" type="Sprite" parent="Turn Type Pick"]
+position = Vector2( -60.8519, 0.416687 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 43 )
+offset = Vector2( 476.639, -1.38885 )
+
+[node name="DiplomaticArea" type="Area2D" parent="Turn Type Pick/Diplomatic"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turn Type Pick/Diplomatic/DiplomaticArea"]
+position = Vector2( 473.675, -6.10352e-05 )
+shape = SubResource( 10 )
+
+[node name="StartOfBattle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 2 )
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 298.333 )
+script = ExtResource( 33 )
+
+[node name="Title" type="Label" parent="StartOfBattle"]
+margin_top = 2.5
+margin_right = 586.0
+margin_bottom = 69.5
+rect_pivot_offset = Vector2( 292.83, 66.6667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Combat Millitary Phase 1/9"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardChoice" type="Label" parent="StartOfBattle"]
+margin_top = 79.1667
+margin_right = 586.0
+margin_bottom = 136.167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "As the higest card used was a minor card 
+this phase shall occur 1 time"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourcePoints" type="Label" parent="StartOfBattle"]
+visible = false
+margin_top = 222.5
+margin_right = 586.0
+margin_bottom = 283.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "You rolled x resource points 
+so may move x units"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Waiting" type="Label" parent="StartOfBattle"]
+visible = false
+margin_left = 2.26415
+margin_top = 272.5
+margin_right = 588.264
+margin_bottom = 301.5
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Waiting for opponant..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="StartOfBattle"]
+visible = false
+margin_left = 199.245
+margin_top = 530.833
+margin_right = 386.245
+margin_bottom = 581.833
+rect_pivot_offset = Vector2( -331.321, -115 )
+custom_fonts/font = SubResource( 26 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="StartOfBattle"]
+margin_left = 149.434
+margin_top = 255.0
+margin_right = 433.434
+margin_bottom = 306.0
+rect_pivot_offset = Vector2( -331.321, -115 )
+custom_fonts/font = SubResource( 26 )
+text = "Roll for Resource Points"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Battle Holder" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 46 )
+
+[node name="Title" type="Label" parent="Battle Holder"]
+margin_right = 586.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 327.547, 39.1667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Kinetic 
+Battle"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle" type="Label" parent="Battle Holder"]
+margin_top = 79.6667
+margin_right = 586.0
+margin_bottom = 145.667
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Apply hits to the enemy units
+You have N hits remaining to apply"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Battle Holder"]
+margin_left = 233.962
+margin_top = 524.167
+margin_right = 351.962
+margin_bottom = 565.167
+custom_fonts/font = SubResource( 14 )
+text = "ROLL DICE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="Battle Holder"]
+visible = false
+margin_left = 238.49
+margin_top = 524.167
+margin_right = 356.49
+margin_bottom = 565.167
+custom_fonts/font = SubResource( 14 )
+text = "CONTINUE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="Battle Holder"]
+visible = false
+margin_left = 238.49
+margin_top = 524.167
+margin_right = 356.49
+margin_bottom = 565.167
+custom_fonts/font = SubResource( 14 )
+text = "CLOSE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Waiting" type="Label" parent="Battle Holder"]
+visible = false
+margin_top = 531.667
+margin_right = 586.0
+margin_bottom = 597.667
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Waiting for opponant..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="End Turn" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 54 )
+
+[node name="Title" type="Label" parent="End Turn"]
+margin_right = 586.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 327.547, 39.1667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "End of Turn"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PresteigeGained" type="Label" parent="End Turn"]
+margin_top = 123.0
+margin_right = 586.0
+margin_bottom = 189.0
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Apply hits to the enemy units
+You have N hits remaining to apply"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resource Points" type="Label" parent="End Turn"]
+margin_top = 212.167
+margin_right = 586.0
+margin_bottom = 278.167
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Extra resource points"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="End Turn"]
+margin_left = 234.0
+margin_top = 524.0
+margin_right = 357.0
+margin_bottom = 565.0
+custom_fonts/font = SubResource( 14 )
+text = "Next Turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Waiting" type="Label" parent="End Turn"]
+visible = false
+margin_top = 531.667
+margin_right = 586.0
+margin_bottom = 597.667
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Waiting for opponant..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ceasefire" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 2 )
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 298.333 )
+script = ExtResource( 12 )
+
+[node name="CardChoice" type="Label" parent="Ceasefire"]
+margin_top = 54.0
+margin_right = 586.0
+margin_bottom = 216.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "One player want's a combat turn, one player wants a tacticle
+ turn, so a ceasefire has occured
+
+Both players roll on there chosen diplomatic card and the one
+ gets the most resource points gets his way (russia wins ties)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Ceasefire"]
+margin_top = 2.5
+margin_right = 586.0
+margin_bottom = 69.5
+rect_pivot_offset = Vector2( 292.83, 66.6667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Ceasefire"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourcePoints" type="Label" parent="Ceasefire"]
+visible = false
+margin_top = 222.5
+margin_right = 586.0
+margin_bottom = 283.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "You rolled x resource points 
+so may move x units"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayersRolls" type="Label" parent="Ceasefire"]
+visible = false
+margin_left = 1.0
+margin_top = 245.5
+margin_right = 587.0
+margin_bottom = 268.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "You rolled and got x resource points!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpponantRolls" type="Label" parent="Ceasefire"]
+margin_left = 1.0
+margin_top = 318.0
+margin_right = 587.0
+margin_bottom = 341.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Opponant is rolling...."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Result" type="Label" parent="Ceasefire"]
+visible = false
+margin_left = 1.0
+margin_top = 377.167
+margin_right = 587.0
+margin_bottom = 400.167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Russia (enemy) got more resource points so will get there way
+so this turn will be a combat turn"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Ceasefire"]
+visible = false
+margin_left = 199.245
+margin_top = 530.833
+margin_right = 386.245
+margin_bottom = 581.833
+rect_pivot_offset = Vector2( -331.321, -115 )
+custom_fonts/font = SubResource( 26 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Ceasefire"]
+margin_left = 148.679
+margin_top = 230.833
+margin_right = 432.679
+margin_bottom = 281.833
+rect_pivot_offset = Vector2( -331.321, -115 )
+custom_fonts/font = SubResource( 26 )
+text = "Roll for Resource Points"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrderPick" type="Sprite" parent="."]
+visible = false
+position = Vector2( 398.75, 360.5 )
+scale = Vector2( 1.327, 1.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="OrderPick"]
+margin_left = -299.0
+margin_top = -252.833
+margin_right = 287.0
+margin_bottom = -185.833
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 41 )
+text = "Select the order of phases in this turn"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MillitaryLable" type="Label" parent="OrderPick"]
+margin_left = -220.611
+margin_top = -128.75
+margin_right = -99.6105
+margin_bottom = -85.75
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Millitary" type="Sprite" parent="OrderPick"]
+position = Vector2( -160, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 41 )
+
+[node name="MillitaryArea" type="Area2D" parent="OrderPick/Millitary"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OrderPick/Millitary/MillitaryArea"]
+position = Vector2( -1.08011, -6.10352e-05 )
+shape = SubResource( 10 )
+
+[node name="DiplomaticLable" type="Label" parent="OrderPick"]
+margin_left = -60.2464
+margin_top = -128.167
+margin_right = 60.7536
+margin_bottom = -85.1667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Diplomatic" type="Sprite" parent="OrderPick"]
+position = Vector2( -142.992, 0.416657 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 43 )
+offset = Vector2( 476.639, -1.38885 )
+
+[node name="DiplomaticArea" type="Area2D" parent="OrderPick/Diplomatic"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OrderPick/Diplomatic/DiplomaticArea"]
+position = Vector2( 473.675, -6.10352e-05 )
+shape = SubResource( 10 )
+
+[node name="InformationLable" type="Label" parent="OrderPick"]
+margin_left = 98.7589
+margin_top = -128.167
+margin_right = 219.759
+margin_bottom = -85.1667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Information" type="Sprite" parent="OrderPick"]
+position = Vector2( 160, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 42 )
+
+[node name="InformationArea" type="Area2D" parent="OrderPick/Information"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OrderPick/Information/InformationArea"]
+position = Vector2( 3.94373, 2.77771 )
+shape = SubResource( 10 )
+
+[node name="RollScreen" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.325, 1.2 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+script = ExtResource( 47 )
+
+[node name="Title" type="Label" parent="RollScreen"]
+margin_right = 586.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 327.547, 39.1667 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Roll for resource points"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle" type="Label" parent="RollScreen"]
+margin_top = 48.0
+margin_right = 586.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "roll a die and get the corrisponding
+resource points from the chart"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle2" type="Label" parent="RollScreen"]
+visible = false
+margin_top = 405.0
+margin_right = 586.0
+margin_bottom = 471.0
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "You rolled a x and gained n resource points!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MajorChart" type="Label" parent="RollScreen"]
+visible = false
+margin_top = 166.333
+margin_right = 586.0
+margin_bottom = 232.333
+rect_pivot_offset = Vector2( -409.811, 274.167 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Roll 2 dice and add them together
+gain that many resource points"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chart" type="Sprite" parent="RollScreen"]
+position = Vector2( 295.849, 188.333 )
+scale = Vector2( 0.646465, 0.646464 )
+texture = ExtResource( 50 )
+
+[node name="Button" type="Button" parent="RollScreen"]
+margin_left = 233.962
+margin_top = 524.167
+margin_right = 351.962
+margin_bottom = 565.167
+custom_fonts/font = SubResource( 14 )
+text = "ROLL DICE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirm" type="Button" parent="RollScreen"]
+visible = false
+margin_left = 233.962
+margin_top = 524.167
+margin_right = 351.962
+margin_bottom = 565.167
+custom_fonts/font = SubResource( 14 )
+text = "CONFIRM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Add Points" type="Button" parent="RollScreen"]
+visible = false
+margin_left = 233.962
+margin_top = 478.334
+margin_right = 351.962
+margin_bottom = 519.334
+custom_fonts/font = SubResource( 14 )
+text = "Add x Points"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Die" type="Node2D" parent="RollScreen"]
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="RollScreen/Die"]
+position = Vector2( 294.34, 317.5 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="RollScreen/Die"]
+
+[node name="Die1" type="Node2D" parent="RollScreen"]
+visible = false
+position = Vector2( -80.7547, 0 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="RollScreen/Die1"]
+position = Vector2( 294.34, 317.5 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="RollScreen/Die1"]
+
+[node name="Die2" type="Node2D" parent="RollScreen"]
+visible = false
+position = Vector2( 80.7547, 0 )
+script = ExtResource( 49 )
+
+[node name="Sprite" type="Sprite" parent="RollScreen/Die2"]
+position = Vector2( 294.34, 317.5 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 48 )
+
+[node name="Sprite2" type="Sprite" parent="RollScreen/Die2"]
+
+[node name="Waiting On Opponent" type="Sprite" parent="."]
+visible = false
+position = Vector2( 398.75, 360.5 )
+scale = Vector2( 1.3275, 1.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 45 )
+
+[node name="Label" type="Label" parent="Waiting On Opponent"]
+margin_left = -300.0
+margin_top = -235.0
+margin_right = 285.0
+margin_bottom = 215.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.960784, 0.92549, 0.92549, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Waiting For Opponent ..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoScreen" type="Sprite" parent="."]
+position = Vector2( 1037, 362 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 26 )
+script = ExtResource( 62 )
+
+[node name="TurnTracker" type="Label" parent="InfoScreen"]
+margin_left = -385.0
+margin_top = -592.0
+margin_right = 390.0
+margin_bottom = -503.0
+custom_fonts/font = SubResource( 18 )
+text = "Turn 1"
+align = 1
+valign = 1
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerName" type="Label" parent="InfoScreen"]
+margin_left = -383.0
+margin_top = -503.0
+margin_right = -3.0
+margin_bottom = -307.0
+mouse_default_cursor_shape = 16
+custom_colors/font_color = Color( 0.721569, 1, 0.596078, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "Player (you)"
+align = 1
+script = ExtResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerPresteige" type="Label" parent="InfoScreen/PlayerName"]
+margin_top = 70.0
+margin_right = 380.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 19 )
+text = "Presteige : 30"
+align = 1
+script = ExtResource( 57 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerScore" type="Label" parent="InfoScreen/PlayerName"]
+margin_top = 107.0
+margin_right = 380.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 19 )
+text = "Score : 30"
+align = 1
+script = ExtResource( 58 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Label" parent="InfoScreen"]
+margin_left = -385.0
+margin_top = 427.0
+margin_right = 384.0
+margin_bottom = 470.0
+custom_fonts/font = SubResource( 8 )
+align = 1
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyName" type="Label" parent="InfoScreen"]
+margin_left = 5.33325
+margin_top = -503.0
+margin_right = 385.333
+margin_bottom = -307.0
+custom_colors/font_color = Color( 1, 0.364706, 0.364706, 1 )
+custom_fonts/font = SubResource( 21 )
+text = "Enemy (enemy)"
+align = 1
+script = ExtResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyPresteige" type="Label" parent="InfoScreen/EnemyName"]
+margin_top = 70.0
+margin_right = 380.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 19 )
+text = "Presteige : 30"
+align = 1
+script = ExtResource( 60 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyScore" type="Label" parent="InfoScreen/EnemyName"]
+margin_top = 107.0
+margin_right = 380.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 19 )
+text = "Score : 30"
+align = 1
+script = ExtResource( 61 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyMil" type="Sprite" parent="InfoScreen"]
+visible = false
+position = Vector2( 400, 598.333 )
+texture = ExtResource( 28 )
+offset = Vector2( -665, -823.333 )
+
+[node name="EnemyDip" type="Sprite" parent="InfoScreen"]
+visible = false
+position = Vector2( 666.667, 598.333 )
+texture = ExtResource( 34 )
+offset = Vector2( -665, -823.333 )
+
+[node name="EnemyInf" type="Sprite" parent="InfoScreen"]
+visible = false
+position = Vector2( 928.333, 598.333 )
+texture = ExtResource( 63 )
+offset = Vector2( -665, -823.333 )
+
+[node name="Menu" type="Control" parent="InfoScreen"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 65 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextTurn" type="Button" parent="InfoScreen/Menu"]
+margin_left = -385.0
+margin_top = 512.0
+margin_right = -130.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 33 )
+text = "Next Phase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggleMap" type="Button" parent="InfoScreen/Menu"]
+margin_left = -126.667
+margin_top = 512.0
+margin_right = 128.333
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 34 )
+text = "Toggle Map"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhaseInfo" type="Button" parent="InfoScreen/Menu"]
+margin_left = 131.667
+margin_top = 512.0
+margin_right = 386.667
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 35 )
+text = "Phase Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MilSelect" type="Area2D" parent="InfoScreen/Menu"]
+position = Vector2( -1728.33, -603.333 )
+scale = Vector2( 1.66667, 1.66667 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfoScreen/Menu/MilSelect"]
+position = Vector2( 878.25, 418 )
+shape = SubResource( 2 )
+
+[node name="P_Card" type="Sprite" parent="InfoScreen/Menu/MilSelect"]
+visible = false
+position = Vector2( 878, 419 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="MinorSelected" type="Sprite" parent="InfoScreen/Menu/MilSelect"]
+visible = false
+position = Vector2( 878, 419 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 28 )
+script = ExtResource( 27 )
+
+[node name="DipSelect" type="Area2D" parent="InfoScreen/Menu"]
+position = Vector2( -1380, -485 )
+scale = Vector2( 1.66667, 1.66667 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfoScreen/Menu/DipSelect"]
+position = Vector2( 828, 347.5 )
+shape = SubResource( 3 )
+
+[node name="P_Card" type="Sprite" parent="InfoScreen/Menu/DipSelect"]
+visible = false
+position = Vector2( 828.349, 348 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="MinorSelected" type="Sprite" parent="InfoScreen/Menu/DipSelect"]
+visible = false
+position = Vector2( 828.349, 348 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 28 )
+script = ExtResource( 27 )
+type = "dip"
+
+[node name="InfSelect" type="Area2D" parent="InfoScreen/Menu"]
+position = Vector2( -1678.33, -603.333 )
+scale = Vector2( 1.66667, 1.66667 )
+script = ExtResource( 5 )
+
+[node name="P_Card" type="Sprite" parent="InfoScreen/Menu/InfSelect"]
+visible = false
+position = Vector2( 1163.5, 419.25 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfoScreen/Menu/InfSelect"]
+position = Vector2( 1163.5, 419 )
+shape = SubResource( 4 )
+
+[node name="MinorSelected" type="Sprite" parent="InfoScreen/Menu/InfSelect"]
+visible = false
+position = Vector2( 1163.5, 419.25 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 28 )
+script = ExtResource( 27 )
+type = "inf"
+
+[node name="Info" type="Sprite" parent="InfoScreen/Menu"]
+visible = false
+texture = ExtResource( 9 )
+script = ExtResource( 66 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -587.0
+margin_right = 387.0
+margin_bottom = -527.0
+custom_fonts/font = SubResource( 36 )
+text = "Phase Tracker"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Effort" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -485.0
+margin_right = 387.0
+margin_bottom = -415.0
+custom_fonts/font = SubResource( 37 )
+text = "Select Effort"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnType" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -413.334
+margin_right = 387.0
+margin_bottom = -343.334
+custom_fonts/font = SubResource( 37 )
+text = "Select Turn Type"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ceasefire" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -341.667
+margin_right = 387.0
+margin_bottom = -271.667
+custom_fonts/font = SubResource( 37 )
+text = "Ceasefire"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Order" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -270.0
+margin_right = 387.0
+margin_bottom = -200.0
+custom_fonts/font = SubResource( 37 )
+text = "Select Turn Order"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phase1" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -198.333
+margin_right = 387.0
+margin_bottom = -128.333
+custom_fonts/font = SubResource( 37 )
+text = "Diplomatic Phase (Postion may change)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phase2" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -126.667
+margin_right = 387.0
+margin_bottom = -56.6669
+custom_fonts/font = SubResource( 37 )
+text = "Millitary Phase (Postion may change)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phase3" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = -55.0
+margin_right = 387.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 37 )
+text = "Information Phase (Postion may change)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndPhase" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = 16.6664
+margin_right = 387.0
+margin_bottom = 86.6664
+custom_fonts/font = SubResource( 37 )
+text = "End Phase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="InfoScreen/Menu/Info"]
+margin_left = -385.0
+margin_top = 515.0
+margin_right = 387.0
+margin_bottom = 585.0
+custom_fonts/font = SubResource( 37 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffortInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/EffortInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Select Effort"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/EffortInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "Each player will select THREE Resource Cards of their choice from their as yet
+ unplayed stock and place one card in each of the three areas of the Card 
+Matrix (Military, Diplomatic and Information)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="InfoScreen/Menu/Info/EffortInfo"]
+margin_left = -300.0
+margin_top = -151.879
+margin_right = 286.0
+margin_bottom = -84.8788
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "There are three types of efforts, minor, major and moderate, For minor you roll
+on the minor chart shown below for resource points. For moderate you roll on
+the moderate chart shown below. And for major you roll two dice and add
+there result together."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chart" type="Sprite" parent="InfoScreen/Menu/Info/EffortInfo"]
+position = Vector2( -1.53415, -4.92427 )
+scale = Vector2( 0.646465, 0.646464 )
+texture = ExtResource( 50 )
+
+[node name="Chart2" type="Sprite" parent="InfoScreen/Menu/Info/EffortInfo"]
+position = Vector2( -0.776581, 110.227 )
+scale = Vector2( 0.646465, 0.646464 )
+texture = ExtResource( 31 )
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/EffortInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/TurnInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Select Turn Type"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/TurnInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "Both players chose if they want a combat or strategic turn, if both players
+want the same turn type then that turn type occurs, otherwise a ceasefire
+occursand whoever wins get there way.
+
+If a combat turn occurs no diplomatic phase will take place"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/TurnInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CeasefireInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/CeasefireInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Ceasefire"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/CeasefireInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "The two players reveal the cards they have played in the Diplomacy Zone, and
+ roll on the Effort Chart to derive their RP. The player with more RP gets his
+ way. If they are still tied, the Russian player decides."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/CeasefireInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrderInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/OrderInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Select Turn Order"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/OrderInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "The player with the most presteige selects the order the phases take place"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/OrderInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MillitaryInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/MillitaryInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Millitary Phase"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/MillitaryInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "- Strategic Turn -
+Players will mobilize and deploy their military units during Strategic Turns.
+ Units move, recover, and engage in combat only during Combat Turns
+
+A unit is mobilized by moving it from the Reserve section to the Mobilized
+ section of the Unit box. It costs 1 RP to mobilize a unit of any type.
+
+To deploy a unit, take it from the Mobilized section of the Unit Box and place it
+ in an area on the map, within the following guidelines depending on its type.
+ It costs one RP to deploy a unit of any type.
+
+Regular: any area within the player’s country that is either empty or contains
+ friendly units 
+
+Irregular: 
+Ukrainian: any area within Ukraine.
+Russian: any area in the pro-Russian Ethnic Zone (Orange) that contains a
+ Special Forces unit.
+
+Special Forces: any area on the map
+
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/MillitaryInfo"]
+margin_left = 4.18184
+margin_top = 191.0
+margin_right = 231.182
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox2" type="Button" parent="InfoScreen/Menu/Info/MillitaryInfo"]
+margin_left = -246.576
+margin_top = 191.0
+margin_right = -19.5757
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Combat Turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiplomaticInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Diplomatic Phase"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "A player may expend RP and Prestige to attempt to move the counter
+ representing a foreign country on the Foreign Relations Display. The
+ Ukrainian player will want to move the counters towards the Support or
+ Intervention Zones on the display, while the Russian player will want to move 
+them towards the Neutral Zone."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -300.0
+margin_top = -124.606
+margin_right = 286.0
+margin_bottom = -39.6061
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "The minimum required number of RP for an attempt to move a country’s
+ counter “up” or “down” one Zone on the Display is indicated in the desired
+ Zone to move to: 1, 2 or 3 RP"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -300.0
+margin_top = -56.4243
+margin_right = 286.0
+margin_bottom = 28.5757
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "To make the attempt, a player will expend at least the required number of 
+RP (1, 2 or 3 RP). If a player is attempting to move a marker, they must also
+ expend Resource and/or Prestige Points equal to the country’s Rank."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -300.0
+margin_top = 13.2728
+margin_right = 286.0
+margin_bottom = 120.273
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "They may at this time also voluntarily expend additional RP and Prestige
+ points. They then roll a number of d6 equal to the country’s Rank, and take
+ the total. If the total is equal to or less than the total of RP and Prestige
+ expended, the country’s counter is moved to the new Zone; otherwise, 
+nothing changes. In either case the RP and Prestige are expended"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Benefits" type="Button" parent="InfoScreen/Menu/Info/DiplomaticInfo"]
+margin_left = -114.0
+margin_top = 147.061
+margin_right = 113.0
+margin_bottom = 186.061
+custom_fonts/font = SubResource( 39 )
+text = "Benefits?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InformationInfo" type="Sprite" parent="InfoScreen/Menu/Info"]
+visible = false
+position = Vector2( -1063.29, 52.5001 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="InfoScreen/Menu/Info/InformationInfo"]
+margin_left = -301.0
+margin_top = -298.0
+margin_right = 287.0
+margin_bottom = -238.0
+custom_fonts/font = SubResource( 36 )
+text = "Infromation Phase"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="InfoScreen/Menu/Info/InformationInfo"]
+margin_left = -300.0
+margin_top = -239.0
+margin_right = 286.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 38 )
+text = "Durinf the Information phase you can chose to do one of three things:
+ - Increasing own Prestige (Doesn't Occur on combat turn)-
+ The player simply rolls the die or dice on the Effort Chart, reading off the row
+ corresponding to the Resource Card played, and adds that number of Prestige 
+Points
+- Reducing the enemy’s Prestige (Doesn't Occur on combat turn)-
+If a player chooses to reduce the enemy’s Prestige through exercising that option
+ in the Information area, they must roll the die or dice twice, reading off the row
+ of the Effort Chart corresponding to the Resource Card played. The higher of the
+ two rolls will reduce the enemy’s Prestige, the lower will reduce their own Prestige
+- Neutralizing the enemy’s units -
+If a player chooses this option, they first roll the die or dice and consult the Effort
+ Chart corresponding to the Card played. The player may make 1, 2 or 3 attempts
+ to neutralize enemy units that have been deployed onto the map, depending if
+ they played a Minor, Moderate or Maximum Effort respectively. On each attempt
+ they roll 1d6 and if they score equal to or less than the number of RP derived on
+ the Effort Chart, the enemy unit is neutralized. Attempts can be made only on
+ units already deployed on the map, not the Reserve or Mobilized boxes. There is no
+ additional effect of neutralizing an already-neutralized unit. 
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeInfoBox" type="Button" parent="InfoScreen/Menu/Info/InformationInfo"]
+margin_left = -114.0
+margin_top = 191.0
+margin_right = 113.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 39 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionBox" type="Control" parent="InfoScreen/Menu"]
+margin_left = -392.0
+margin_top = 177.0
+margin_right = 390.0
+margin_bottom = 510.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackGround" type="Sprite" parent="InfoScreen/Menu/ActionBox"]
+position = Vector2( 391.167, 168 )
+scale = Vector2( 7.75, 3.3 )
+texture = ExtResource( 19 )
+
+[node name="ActionText" type="RichTextLabel" parent="InfoScreen/Menu/ActionBox"]
+margin_left = 5.0
+margin_right = 779.0
+margin_bottom = 331.0
+custom_colors/default_color = Color( 0.611765, 0.121569, 0.0823529, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 43 )
+bbcode_enabled = true
+bbcode_text = "aaaaaaaaaaaaaaaaaaaaaaa"
+text = "aaaaaaaaaaaaaaaaaaaaaaa"
+scroll_following = true
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="InfoScreen/Menu/ActionBox/ActionText"]
+visible = false
+margin_left = 658.667
+margin_top = 4.66663
+margin_right = 714.667
+margin_bottom = 44.6666
+text = "Test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverScreen" type="Sprite" parent="."]
+visible = false
+offset = Vector2( 300, 300 )
+script = ExtResource( 64 )
+
+[node name="GameOverScreen" type="Sprite" parent="GameOverScreen"]
+scale = Vector2( 2.19167, 2.19167 )
+texture = ExtResource( 2 )
+offset = Vector2( 300, 300 )
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+margin_right = 1284.0
+margin_bottom = 97.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 29 )
+text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GameOverScreen"]
+margin_top = 109.0
+margin_right = 1279.0
+margin_bottom = 176.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 30 )
+text = "You win"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="GameOverScreen"]
+margin_top = 190.0
+margin_right = 1281.0
+margin_bottom = 512.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 30 )
+text = "The crisis has stabilized for now, possibly in some
+form of temporary ceasefire, though the basic 
+issues are still not resolved. The advantage will 
+be to the country with more points
+ should it resume."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="input_event" from="Map/Area2D" to="Map/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D2" to="Map/Area2D2" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D3" to="Map/Area2D3" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D4" to="Map/Area2D4" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D5" to="Map/Area2D5" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D6" to="Map/Area2D6" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D7" to="Map/Area2D7" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D8" to="Map/Area2D8" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D9" to="Map/Area2D9" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D10" to="Map/Area2D10" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D11" to="Map/Area2D11" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D12" to="Map/Area2D12" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D13" to="Map/Area2D13" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D14" to="Map/Area2D14" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D15" to="Map/Area2D15" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D16" to="Map/Area2D16" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D17" to="Map/Area2D17" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D18" to="Map/Area2D18" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D19" to="Map/Area2D19" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D20" to="Map/Area2D20" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D21" to="Map/Area2D21" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D22" to="Map/Area2D22" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Map/Area2D23" to="Map/Area2D23" method="_on_Area2D_input_event"]
+[connection signal="pressed" from="TerritoryHolder/KineticBattle" to="TerritoryHolder" method="_on_KineticBattle_pressed"]
+[connection signal="pressed" from="TerritoryHolder/SymbolicBattle" to="TerritoryHolder" method="_on_SymbolicBattle_pressed"]
+[connection signal="button_down" from="TerritoryHolder/Button2" to="TerritoryHolder" method="_on_Button_button_down"]
+[connection signal="pressed" from="TerritoryHolder/Button3" to="TerritoryHolder" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TerritoryHolder/Cancel" to="TerritoryHolder" method="_on_Cancel_pressed"]
+[connection signal="pressed" from="OpinionHolder/Control/Button" to="OpinionHolder/Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="OpinionHolder/Control/Close" to="OpinionHolder/Control" method="_on_Close_pressed"]
+[connection signal="pressed" from="OpinionHolder/Button" to="OpinionHolder" method="_on_Button_pressed"]
+[connection signal="pressed" from="MillitaryHolder/Button" to="MillitaryHolder" method="_on_Button_pressed"]
+[connection signal="pressed" from="InformationHolder/IncreasePresteige" to="InformationHolder" method="_on_IncreasePresteige_pressed"]
+[connection signal="pressed" from="InformationHolder/Button" to="InformationHolder" method="_on_Button_pressed"]
+[connection signal="pressed" from="InformationHolder/ReducePresteige" to="InformationHolder" method="_on_ReducePresteige_pressed"]
+[connection signal="pressed" from="InformationHolder/IncreaseScreen/Roll" to="InformationHolder" method="_on_Roll_pressed"]
+[connection signal="pressed" from="InformationHolder/IncreaseScreen/CloseIncrease" to="InformationHolder" method="_on_CloseIncrease_pressed"]
+[connection signal="pressed" from="InformationHolder/ReduceScreen/RollReduce1" to="InformationHolder" method="_on_RollReduce1_pressed"]
+[connection signal="pressed" from="InformationHolder/ReduceScreen/RollReduce2" to="InformationHolder" method="_on_RollReduce2_pressed"]
+[connection signal="pressed" from="InformationHolder/ReduceScreen/CloseReduce" to="InformationHolder" method="_on_CloseReduce_pressed"]
+[connection signal="pressed" from="InformationHolder/NeutralizScreen/RollNeutralize" to="InformationHolder" method="_on_RollNeutralize_pressed"]
+[connection signal="pressed" from="InformationHolder/NeutralizScreen/CloseNeutralize" to="InformationHolder" method="_on_CloseNeutralize_pressed"]
+[connection signal="input_event" from="Turn Type Pick/Millitary/MillitaryArea" to="Turn Type Pick" method="_on_MillitaryArea_input_event"]
+[connection signal="input_event" from="Turn Type Pick/Diplomatic/DiplomaticArea" to="Turn Type Pick" method="_on_DiplomaticArea_input_event"]
+[connection signal="pressed" from="StartOfBattle/Button" to="StartOfBattle" method="_on_Button_pressed"]
+[connection signal="pressed" from="StartOfBattle/Button2" to="StartOfBattle" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Battle Holder/Button" to="Battle Holder" method="_on_Button_pressed"]
+[connection signal="pressed" from="Battle Holder/Continue" to="Battle Holder" method="_on_Continue_pressed"]
+[connection signal="pressed" from="Battle Holder/Close" to="Battle Holder" method="_on_Close_pressed"]
+[connection signal="pressed" from="End Turn/Close" to="End Turn" method="_on_Close_pressed"]
+[connection signal="pressed" from="Ceasefire/Button" to="Ceasefire" method="_on_Button_pressed"]
+[connection signal="pressed" from="Ceasefire/Button2" to="Ceasefire" method="_on_Button2_pressed"]
+[connection signal="input_event" from="OrderPick/Millitary/MillitaryArea" to="OrderPick" method="_on_MillitaryArea_input_event"]
+[connection signal="input_event" from="OrderPick/Diplomatic/DiplomaticArea" to="OrderPick" method="_on_DiplomaticArea_input_event"]
+[connection signal="input_event" from="OrderPick/Information/InformationArea" to="OrderPick" method="_on_InformationArea_input_event"]
+[connection signal="pressed" from="RollScreen/Button" to="RollScreen" method="_on_Button_pressed"]
+[connection signal="pressed" from="RollScreen/Confirm" to="RollScreen" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="RollScreen/Add Points" to="RollScreen" method="_on_Add_Points_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/NextTurn" to="InfoScreen/Menu" method="_on_NextTurn_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/ToggleMap" to="InfoScreen/Menu" method="_on_ToggleMap_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/PhaseInfo" to="InfoScreen/Menu" method="_on_PhaseInfo_pressed"]
+[connection signal="mouse_entered" from="InfoScreen/Menu/MilSelect" to="InfoScreen/Menu/MilSelect" method="_on_Area2D2_mouse_entered"]
+[connection signal="mouse_exited" from="InfoScreen/Menu/MilSelect" to="InfoScreen/Menu/MilSelect" method="_on_Area2D2_mouse_exited"]
+[connection signal="mouse_entered" from="InfoScreen/Menu/DipSelect" to="InfoScreen/Menu/DipSelect" method="_on_DipSelect_mouse_entered"]
+[connection signal="mouse_exited" from="InfoScreen/Menu/DipSelect" to="InfoScreen/Menu/DipSelect" method="_on_DipSelect_mouse_exited"]
+[connection signal="mouse_entered" from="InfoScreen/Menu/InfSelect" to="InfoScreen/Menu/InfSelect" method="_on_InfSelect_mouse_entered"]
+[connection signal="mouse_exited" from="InfoScreen/Menu/InfSelect" to="InfoScreen/Menu/InfSelect" method="_on_InfSelect_mouse_exited"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Effort" to="InfoScreen/Menu/Info" method="_on_Effort_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/TurnType" to="InfoScreen/Menu/Info" method="_on_TurnType_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Ceasefire" to="InfoScreen/Menu/Info" method="_on_Ceasefire_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Order" to="InfoScreen/Menu/Info" method="_on_Order_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Phase1" to="InfoScreen/Menu/Info" method="_on_Phase1_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Phase2" to="InfoScreen/Menu/Info" method="_on_Phase2_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Phase3" to="InfoScreen/Menu/Info" method="_on_Phase3_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/Close" to="InfoScreen/Menu" method="_on_Close_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/EffortInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/TurnInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/CeasefireInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/OrderInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/MillitaryInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/MillitaryInfo/closeInfoBox2" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/DiplomaticInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/DiplomaticInfo/Benefits" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/Info/InformationInfo/closeInfoBox" to="InfoScreen/Menu/Info" method="_on_closeInfoBox_pressed"]
+[connection signal="pressed" from="InfoScreen/Menu/ActionBox/ActionText/Button" to="InfoScreen/Menu/ActionBox/ActionText" method="_on_Button_pressed"]
